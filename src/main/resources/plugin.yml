@@ -1,0 +1,5 @@
+name: HopperSorter
+version: '${project.version}'
+main: me.dotty.hoppersorter.HopperSorter
+api-version: '1.20'
+authors: [Dotty]
