@@ -13,7 +13,7 @@ public class HopperEvents implements Listener {
 
     String getItemName(String translationKey) {
         if (translationKey == null) return null;
-        String[] names = translationKey.split("\\."); // @TODO check if this works
+        String[] names = translationKey.split("\\.");
         return names[names.length-1];
     }
 
@@ -44,7 +44,8 @@ public class HopperEvents implements Listener {
         }
     }
 
-    @EventHandler void onInventoryPickupItemEvent(InventoryPickupItemEvent e) {
+    @EventHandler
+    void onInventoryPickupItemEvent(InventoryPickupItemEvent e) {
         if (e.getInventory().getHolder() instanceof Container) {
             String customName = ((Container) e.getInventory().getHolder()).getCustomName();
             if (customName != null) {
